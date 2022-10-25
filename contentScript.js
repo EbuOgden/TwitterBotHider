@@ -1,6 +1,7 @@
 (async () => {
     let currentTweet = "";
     let phrasesArray = [];
+    let phrase = "//span[";
 
     chrome.runtime.onMessage.addListener((obj, sender, response) => {
         const { type, value, tweetId } = obj;
@@ -17,6 +18,12 @@
         await fetch(URL)
             .then((response) => response.json())
             .then((json) => phrasesArray = json.data);
+
+        let phrases = phrasesArray.map((element) => {
+            return `contains(text(), "${element}")`
+        }).join(" or ");
+
+        phrase+= phrases+"]//ancestor::article";
     }
 
     const getElementsByXPath = (xpath, parent) => {
@@ -31,12 +38,6 @@
     }
     
     const removeTweets = () => {
-        let phrase = "//span[";
-        let phrases = phrasesArray.map((element) => {
-            return `contains(text(), "${element}")`
-        }).join(" or ");
-        phrase+= phrases+"]//ancestor::article";
-
         let nodes = getElementsByXPath(`${phrase}`);
         
         nodes.forEach(eachNode => {
