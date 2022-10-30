@@ -15,7 +15,7 @@
     const getPhrases = async () => {
         const URL = "https://raw.githubusercontent.com/EbuOgden/TwitterBotHider/main/phrases.json";
 
-        await fetch(URL, {cache: "no-store"})
+        await fetch(URL, {cache: "no-cache"})
             .then((response) => response.json())
             .then((json) => phrasesArray = json.data);
 

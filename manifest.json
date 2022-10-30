@@ -2,8 +2,7 @@
   "name": "Twitter Bot Hider",
   "version": "0.1.0",
   "description": "Hides twitter bots from your timeline.",
-  "permissions": ["storage", "tabs"],
-  "host_permissions": ["https://*.twitter.com/*"],
+  "permissions": ["tabs"],
   "background": {
     "service_worker": "background.js"
   },
@@ -16,10 +15,6 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "assets/bookmark.png",
-        "assets/play.png",
-        "assets/delete.png",
-        "assets/save.png",
         "https://*.githubusercontent.com/*"
       ],
       "matches": ["https://*.twitter.com/*"]
