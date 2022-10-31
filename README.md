@@ -4,7 +4,7 @@ Twitter Bot Hider Chrome Extension helps to hide spam/bot tweets under tweets' r
 
 ## Usage
 
-You can either download the source code and manually add it to your chrome or download it from the chrome web store (🔜)
+You can either download the source code and manually add it to your chrome or download it from the chrome web store from the following link: [Twitter Bot Hider](https://chrome.google.com/webstore/detail/twitter-bot-hider/efpmoenhggjbiaeomapapohigijbobgb)
 
 ## Contributing
 
@@ -14,7 +14,7 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ## TO-DO
 
-- [ ] Publish it to Chrome Web Store
+- [ X ] Publish it to Chrome Web Store
 - [ ] Deploy it to other browsers (Safari, Firefox)
 
 ## License

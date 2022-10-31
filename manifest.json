@@ -1,6 +1,6 @@
 {
   "name": "Twitter Bot Hider",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Hides twitter bots from your timeline.",
   "permissions": ["tabs"],
   "background": {
